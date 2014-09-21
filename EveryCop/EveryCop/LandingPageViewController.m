@@ -21,6 +21,7 @@
 {
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,11 +48,14 @@
     mapView.showsUserLocation = TRUE;
     mapView.delegate = self;
     
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 39.281516;
-    zoomLocation.longitude= -76.580806;
+    //GEt current location
+    locationMgr = [[CLLocationManager alloc] init];
+    locationMgr.distanceFilter = kCLDistanceFilterNone;
+    locationMgr.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    [locationMgr startUpdatingLocation];
+    mapView.userLocation.coordinate = locationMgr.location.coordinate;
 		
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(zoomLocation, 8, 8);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 8, 8);
     
     [mapView setRegion:region animated:YES];
     [self registerPinView:@"Start Location" WithLocation:mapView.userLocation.coordinate];

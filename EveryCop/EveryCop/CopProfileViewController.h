@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CopProfileViewController : UIViewController
+@interface CopProfileViewController : UIViewController<UITextViewDelegate>
 {
     IBOutlet UITextField* copName;
     IBOutlet UITextField* copBadgeNumber;
@@ -29,6 +29,7 @@
     IBOutlet UILabel* fourthRating;
     IBOutlet UILabel* fifthRating;
     
+    IBOutlet UIScrollView *scrollView;
 }
 
 - (IBAction)valueChanged:(id)sender;

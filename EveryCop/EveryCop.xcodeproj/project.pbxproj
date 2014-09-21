@@ -26,6 +26,7 @@
 		5C14EE7219CE229F001295D0 /* Cop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7119CE229F001295D0 /* Cop.m */; };
 		5C14EE7519CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */; };
 		5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* CopProfileViewController.m */; };
+		5C34D55F19CE766E00D0D0BB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C34D55E19CE766E00D0D0BB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIncidentListCellTableViewCell.m; sourceTree = "<group>"; };
 		5C14EE7619CE4533001295D0 /* CopProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopProfileViewController.h; sourceTree = "<group>"; };
 		5C14EE7719CE4533001295D0 /* CopProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopProfileViewController.m; sourceTree = "<group>"; };
+		5C34D55E19CE766E00D0D0BB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C34D55F19CE766E00D0D0BB /* CoreLocation.framework in Frameworks */,
 				5C14EE6C19CE178F001295D0 /* MapKit.framework in Frameworks */,
 				5C14EE3919CE1405001295D0 /* CoreGraphics.framework in Frameworks */,
 				5C14EE3B19CE1405001295D0 /* UIKit.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		5C14EE3519CE1405001295D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C34D55E19CE766E00D0D0BB /* CoreLocation.framework */,
 				5C14EE6B19CE178F001295D0 /* MapKit.framework */,
 				5C14EE3619CE1405001295D0 /* Foundation.framework */,
 				5C14EE3819CE1405001295D0 /* CoreGraphics.framework */,
@@ -223,6 +227,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = PoliceTracker;
 				TargetAttributes = {
+					5C14EE3219CE1405001295D0 = {
+						DevelopmentTeam = BWWUY5Y235;
+					};
 					5C14EE5319CE1405001295D0 = {
 						TestTargetID = 5C14EE3219CE1405001295D0;
 					};
@@ -404,10 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EveryCop/EveryCop-Prefix.pch";
 				INFOPLIST_FILE = "EveryCop/EveryCop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -417,10 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EveryCop/EveryCop-Prefix.pch";
 				INFOPLIST_FILE = "EveryCop/EveryCop-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -484,6 +497,7 @@
 				5C14EE6719CE1406001295D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C14EE6819CE1406001295D0 /* Build configuration list for PBXNativeTarget "EveryCopTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +506,7 @@
 				5C14EE6A19CE1406001295D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

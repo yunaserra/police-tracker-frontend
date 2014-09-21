@@ -75,6 +75,29 @@
     thirdSlider.tag = 3;
     fourthSlider.tag = 4;
     fifthSlider.tag = 5;
+    
+    description.delegate = self;
+    description.layer.borderWidth = 1.0f;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(backToMain)];
+    
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 500);
+}
+
+- (void) backToMain
+{
+    
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];
+        return FALSE;
+    }
+    return TRUE;
 }
 
 - (void)didReceiveMemoryWarning

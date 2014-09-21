@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface LandingPageViewController : UIViewController<MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface LandingPageViewController : UIViewController<MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 {
     IBOutlet UITextField *searchField;
     IBOutlet MKMapView *mapView;
     IBOutlet UITableView *listView;
     IBOutlet UIButton *reportButton;
     IBOutlet UISegmentedControl *mapOrListButton;
+    
+    CLLocationManager *locationMgr;
     
 }
 
