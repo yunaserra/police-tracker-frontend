@@ -58,7 +58,6 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 8, 8);
     
     [mapView setRegion:region animated:YES];
-    [self registerPinView:@"Start Location" WithLocation:mapView.userLocation.coordinate];
 }
 
 /**********

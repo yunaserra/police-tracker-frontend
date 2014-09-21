@@ -7,6 +7,7 @@
 //
 
 #import "CopProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface CopProfileViewController ()
 
@@ -54,15 +55,51 @@
 - (IBAction)finishedTyping:(id)sender
 {
     UITextField *textField = (UITextField*)sender;
+    NSString* key = nil;
     
     if (textField.tag == 0)
     {
-        //Name
+        key = @"Name";
     }
     else if (textField.tag == 1)
     {
-        //Badge number
+        key = @"Badge";
     }
+    else
+    {
+        return;
+    }
+    
+    copName.enabled = false;
+    copName.userInteractionEnabled = false;
+    copBadgeNumber.enabled = false;
+    copBadgeNumber.userInteractionEnabled = false;
+    
+    PFQuery * query = [PFQuery queryWithClassName:@"Cop"];
+    [query whereKey:key equalTo:textField.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error != nil || [objects count] == 0)
+        {
+            copBadgeNumber.text = @"";
+            copName.text = @"";
+        }
+        else
+        {
+            if (textField.tag == 0)
+            {
+                copBadgeNumber.text = [(PFObject*)[objects firstObject] objectForKey:@"Badge"];
+            }
+            else
+            {
+                copName.text = [(PFObject*)[objects firstObject] objectForKey:@"Name"];
+            }
+        }
+        
+        copName.enabled = true;
+        copName.userInteractionEnabled = true;
+        copBadgeNumber.enabled = true;
+        copBadgeNumber.userInteractionEnabled = true;
+    }];
 }
 
 - (void)viewDidLoad
