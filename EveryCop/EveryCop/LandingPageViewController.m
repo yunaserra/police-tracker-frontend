@@ -9,7 +9,8 @@
 #import "LandingPageViewController.h"
 #import "CustomIncidentListCellTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "PinView.h"
+#import <Parse/Parse.h>
 
 @interface LandingPageViewController ()
 
@@ -56,8 +57,27 @@
     mapView.userLocation.coordinate = locationMgr.location.coordinate;
 		
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 8, 8);
-    
     [mapView setRegion:region animated:YES];
+    
+    PFQuery* query = [PFQuery queryWithClassName:@"IncidentReport"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error == nil)
+        {
+            for (PFObject* object in objects)
+            {
+                PFObject *cop = [object objectForKey:@"Cop"];
+                cop = [cop fetchIfNeeded];
+                PFGeoPoint *geo = [object objectForKey:@"Location"];
+                NSString *copBadge = @"Dummy";
+                NSString *description = [object objectForKey:@"Description"];
+                PinView * pinView = [[PinView alloc] initWithName:copBadge
+                                                       AndSubtext:description
+                                                        AndObject:object
+                                                    AndCoordinate:CLLocationCoordinate2DMake(geo.latitude, geo.longitude)];
+                [mapView addAnnotation:pinView];
+            }
+        }
+    }];
 }
 
 /**********
@@ -90,11 +110,6 @@
 - (void)search : (id) sender
 {
     //do nothing
-}
-
-- (void)registerPinView:(NSString *)name WithLocation:(CLLocationCoordinate2D)coord
-{
-	
 }
 
 /****
@@ -145,6 +160,34 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)registerPinView:(NSString *)name AndSubtext:(NSString *)subtext WithLocation:(CLLocationCoordinate2D)coord
+{
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)locMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    static NSString *identifier = @"PinView";
+    if ([annotation isKindOfClass:[PinView class]])
+    {
+        MKAnnotationView *annotationView = (MKAnnotationView *) [locMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            annotationView.enabled = YES;
+            annotationView.canShowCallout = YES;
+            annotationView.centerOffset = CGPointMake(0, -annotationView.image.size.height/2);
+        }
+        else
+        {
+            annotationView.annotation = annotation;
+        }
+        
+        return annotationView;
+    }
+    
+    return nil;
 }
 
 @end
