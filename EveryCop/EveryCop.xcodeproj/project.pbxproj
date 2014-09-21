@@ -27,10 +27,11 @@
 		5C14EE4D19CE1405001295D0 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */; };
 		5C14EE4F19CE1405001295D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C14EE4E19CE1405001295D0 /* Images.xcassets */; };
 		5C14EE6C19CE178F001295D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE6B19CE178F001295D0 /* MapKit.framework */; };
-		5C14EE6F19CE19FC001295D0 /* ReportSubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE6E19CE19FC001295D0 /* ReportSubmissionViewController.m */; };
 		5C14EE7219CE229F001295D0 /* Cop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7119CE229F001295D0 /* Cop.m */; };
 		5C14EE7519CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */; };
 		5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* CopProfileViewController.m */; };
+		5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56119CE971800D0D0BB /* IncidentViewController.m */; };
+		5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,14 +60,16 @@
 		5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
 		5C14EE4E19CE1405001295D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C14EE6B19CE178F001295D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		5C14EE6D19CE19FC001295D0 /* ReportSubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportSubmissionViewController.h; sourceTree = "<group>"; };
-		5C14EE6E19CE19FC001295D0 /* ReportSubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportSubmissionViewController.m; sourceTree = "<group>"; };
 		5C14EE7019CE229F001295D0 /* Cop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cop.h; sourceTree = "<group>"; };
 		5C14EE7119CE229F001295D0 /* Cop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cop.m; sourceTree = "<group>"; };
 		5C14EE7319CE31BB001295D0 /* CustomIncidentListCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIncidentListCellTableViewCell.h; sourceTree = "<group>"; };
 		5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIncidentListCellTableViewCell.m; sourceTree = "<group>"; };
 		5C14EE7619CE4533001295D0 /* CopProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopProfileViewController.h; sourceTree = "<group>"; };
 		5C14EE7719CE4533001295D0 /* CopProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopProfileViewController.m; sourceTree = "<group>"; };
+		5C34D56019CE971800D0D0BB /* IncidentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentViewController.h; sourceTree = "<group>"; };
+		5C34D56119CE971800D0D0BB /* IncidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentViewController.m; sourceTree = "<group>"; };
+		5C34D56319CEA5EB00D0D0BB /* CopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopViewController.h; sourceTree = "<group>"; };
+		5C34D56419CEA5EB00D0D0BB /* CopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,14 +145,16 @@
 				5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */,
 				5C14EE4E19CE1405001295D0 /* Images.xcassets */,
 				5C14EE3D19CE1405001295D0 /* Supporting Files */,
-				5C14EE6D19CE19FC001295D0 /* ReportSubmissionViewController.h */,
-				5C14EE6E19CE19FC001295D0 /* ReportSubmissionViewController.m */,
 				5C14EE7019CE229F001295D0 /* Cop.h */,
 				5C14EE7119CE229F001295D0 /* Cop.m */,
 				5C14EE7319CE31BB001295D0 /* CustomIncidentListCellTableViewCell.h */,
 				5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */,
 				5C14EE7619CE4533001295D0 /* CopProfileViewController.h */,
 				5C14EE7719CE4533001295D0 /* CopProfileViewController.m */,
+				5C34D56019CE971800D0D0BB /* IncidentViewController.h */,
+				5C34D56119CE971800D0D0BB /* IncidentViewController.m */,
+				5C34D56319CEA5EB00D0D0BB /* CopViewController.h */,
+				5C34D56419CEA5EB00D0D0BB /* CopViewController.m */,
 			);
 			path = EveryCop;
 			sourceTree = "<group>";
@@ -240,13 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C14EE6F19CE19FC001295D0 /* ReportSubmissionViewController.m in Sources */,
 				5C14EE4D19CE1405001295D0 /* LandingPageViewController.m in Sources */,
 				5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */,
 				5C14EE7519CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m in Sources */,
 				5C14EE7219CE229F001295D0 /* Cop.m in Sources */,
+				5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */,
 				5C14EE4719CE1405001295D0 /* AppDelegate.m in Sources */,
 				5C14EE4319CE1405001295D0 /* main.m in Sources */,
+				5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

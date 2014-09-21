@@ -24,6 +24,7 @@
 
 - (IBAction) viewTypeChanged : (id) sender;
 - (IBAction) buttonClicked : (id) sender;
+- (IBAction) pinSelected: (id) sender;
 - (void)registerPinView:(NSString *)name WithLocation:(CLLocationCoordinate2D)coord;
 
 @end

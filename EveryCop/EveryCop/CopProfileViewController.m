@@ -7,7 +7,7 @@
 //
 
 #import "CopProfileViewController.h"
-#import <Parse/Parse.h>
+
 
 @interface CopProfileViewController ()
 
@@ -47,6 +47,12 @@
         case 5:
             fifthRating.text = [NSString stringWithFormat:@"%i", value];
             break;
+        case 6:
+            sixthRating.text = [NSString stringWithFormat:@"%i", value];
+            break;
+        case 7:
+            seventhRating.text = [NSString stringWithFormat:@"%i", value];
+            break;
         default:
             break;
     }
@@ -85,6 +91,7 @@
         }
         else
         {
+            toSave = (PFObject*)[objects firstObject];
             if (textField.tag == 0)
             {
                 copBadgeNumber.text = [(PFObject*)[objects firstObject] objectForKey:@"Badge"];
@@ -112,18 +119,34 @@
     thirdSlider.tag = 3;
     fourthSlider.tag = 4;
     fifthSlider.tag = 5;
+    sixthSlider.tag = 6;
+    seventhSlider.tag = 7;
     
     description.delegate = self;
     description.layer.borderWidth = 1.0f;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(backToMain)];
-    
-    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 500);
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 550);
 }
 
-- (void) backToMain
+- (IBAction)submitReport:(id)sender
 {
+    PFObject *incidentData = [PFObject objectWithClassName:@"IncidentReport"];
+    incidentData[@"Description"] = description.text;
+    //excelence, harm reduction, service humilty justie resepect professional
+    incidentData[@"Excellence"] = [NSNumber numberWithFloat:firstSlider.value];
+    incidentData[@"HarmReduction"] = [NSNumber numberWithFloat:secondSlider.value];
+    incidentData[@"Service"] = [NSNumber numberWithFloat:thirdSlider.value];
+    incidentData[@"Humility"] = [NSNumber numberWithFloat:fourthSlider.value];
+    incidentData[@"Justice"] = [NSNumber numberWithFloat:fifthSlider.value];
+    incidentData[@"Respect"] = [NSNumber numberWithFloat:sixthSlider.value];
+    incidentData[@"Professional"] = [NSNumber numberWithFloat:seventhSlider.value];
     
+    incidentData[@"Cop"] = toSave;
+    
+    [incidentData saveInBackground];
+    
+    //Move back to map screen
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range

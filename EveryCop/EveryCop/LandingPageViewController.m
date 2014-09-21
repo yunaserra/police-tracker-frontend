@@ -107,6 +107,12 @@
     [self performSegueWithIdentifier:identifier sender:sender];
 }
 
+- (IBAction) pinSelected: (id) sender
+{
+    NSString *identifier = @"incident";
+    [self performSegueWithIdentifier:identifier sender:sender];
+}
+
 
 /*************************
  

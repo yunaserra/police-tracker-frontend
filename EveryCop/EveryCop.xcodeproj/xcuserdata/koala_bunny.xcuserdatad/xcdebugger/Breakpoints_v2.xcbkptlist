@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EveryCop/CopProfileViewController.m"
-            timestampString = "432954871.892946"
+            timestampString = "432972465.529237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-finishedTyping:"
             landmarkType = "5">
          </BreakpointContent>

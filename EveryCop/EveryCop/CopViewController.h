@@ -1,5 +1,5 @@
 //
-//  ReportSubmissionViewController.h
+//  CopViewController.h
 //  EveryCop
 //
 //  Created by GabrielYuna Serra on 9/20/14.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReportSubmissionViewController : UIViewController
+@interface CopViewController : UIViewController
 {
-    IBOutlet UITextField* name;
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UILabel *badgeLabel;
 }
 
 @end

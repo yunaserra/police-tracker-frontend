@@ -1,18 +1,18 @@
 //
-//  ReportSubmissionViewController.m
+//  IncidentViewController.m
 //  EveryCop
 //
 //  Created by GabrielYuna Serra on 9/20/14.
 //  Copyright (c) 2014 PoliceTracker. All rights reserved.
 //
 
-#import "ReportSubmissionViewController.h"
+#import "IncidentViewController.h"
 
-@interface ReportSubmissionViewController ()
+@interface IncidentViewController ()
 
 @end
 
-@implementation ReportSubmissionViewController
+@implementation IncidentViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"EveryCop";
+    descriptionView.layer.borderWidth = 1.0f;
+}
+
+- (IBAction) officerButtonClicked : (id) sender
+{
+    NSString *identifier = @"cop";
+    [self performSegueWithIdentifier:identifier sender:sender];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,13 +42,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
 }
-
+*/
 
 @end
