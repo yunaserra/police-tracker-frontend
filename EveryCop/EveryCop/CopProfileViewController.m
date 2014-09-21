@@ -122,8 +122,15 @@
     sixthSlider.tag = 6;
     seventhSlider.tag = 7;
     
+    attachPhotoBtn.layer.cornerRadius = 10;
+    attachPhotoBtn.layer.borderWidth = 1;
+    
+    submitBtn.layer.cornerRadius = 10;
+    submitBtn.layer.borderWidth = 1;
+    
     description.delegate = self;
     description.layer.borderWidth = 1.0f;
+    description.layer.borderColor = attachPhotoBtn.backgroundColor.CGColor;
     
     scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 550);
 }

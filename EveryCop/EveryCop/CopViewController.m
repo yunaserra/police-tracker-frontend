@@ -30,6 +30,9 @@
     // Do any additional setup after loading the view.
     [interactionTable setDataSource:self];
     [interactionTable setDelegate:self];
+    
+    UIImage *img = [UIImage imageNamed:@"Seattle-police-shield.png"];
+    copPhoto.image = img;
 }
 
 - (void)didReceiveMemoryWarning

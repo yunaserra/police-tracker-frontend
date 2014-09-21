@@ -50,6 +50,9 @@
     mapView.showsUserLocation = TRUE;
     mapView.delegate = self;
     
+    mapView.layer.borderWidth = 1.0f;
+    mapView.layer.borderColor = reportButton.backgroundColor.CGColor;
+    
     //GEt current location
     locationMgr = [[CLLocationManager alloc] init];
     locationMgr.distanceFilter = kCLDistanceFilterNone;

@@ -20,6 +20,10 @@
     
     IBOutlet UIButton *officerButton;
     IBOutlet UITextView *descriptionView;
+    IBOutlet UIButton *reportBtn;
+    IBOutlet UIButton *twitterBtn;
+    IBOutlet UIButton *fbButton;
+    IBOutlet UIButton *addCommentBtn;
 }
 
 - (IBAction) officerButtonClicked : (id) sender;

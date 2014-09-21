@@ -14,6 +14,8 @@
     IBOutlet UILabel *badgeLabel;
     
     IBOutlet UITableView *interactionTable;
+    
+    IBOutlet UIImageView *copPhoto;
 }
 
 @end
