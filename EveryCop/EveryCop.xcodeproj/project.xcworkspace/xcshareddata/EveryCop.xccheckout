@@ -12,22 +12,34 @@
 	<dict>
 		<key>4A8A57A9-E465-4D96-A166-A21E246F408A</key>
 		<string>https://github.com/yunaserra/police-tracker-frontend.git</string>
+		<key>B67AA55B3222F257372F4A9693C9C9DE8E5719B2</key>
+		<string>https://github.com/yunaserra/police-tracker-frontend.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EveryCop/EveryCop.xcodeproj/project.xcworkspace</string>
+	<string>EveryCop/EveryCop.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4A8A57A9-E465-4D96-A166-A21E246F408A</key>
+		<string>../../../../StartupWeekend</string>
+		<key>B67AA55B3222F257372F4A9693C9C9DE8E5719B2</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yunaserra/police-tracker-frontend.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4A8A57A9-E465-4D96-A166-A21E246F408A</string>
+	<string>B67AA55B3222F257372F4A9693C9C9DE8E5719B2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B67AA55B3222F257372F4A9693C9C9DE8E5719B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PoliceTracker</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -7,6 +7,7 @@
 //
 
 #import "CopViewController.h"
+#import "CustomIncidentListCellTableViewCell.h"
 
 @interface CopViewController ()
 
@@ -27,12 +28,38 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [interactionTable setDataSource:self];
+    [interactionTable setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+/*
+    Table stuffs
+ */
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *incidentTableIdentifier = @"IncidentCell";
+    
+    CustomIncidentListCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:incidentTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[CustomIncidentListCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:incidentTableIdentifier];
+    }
+    
+    cell.textLabel.text = @"Test";
+    
+    return cell;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
 }
 
 /*

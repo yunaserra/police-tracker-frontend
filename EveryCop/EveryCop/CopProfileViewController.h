@@ -35,6 +35,8 @@
     
     IBOutlet UIScrollView *scrollView;
     IBOutlet UIButton* submitBtn;
+    IBOutlet UIButton* attachPhotoBtn;
+    IBOutlet UIButton* attachVideoBtn;
     
     PFObject *toSave;
 }

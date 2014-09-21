@@ -18,6 +18,8 @@
 		35B3776A19CE5E1100255543 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3776119CE5E1100255543 /* Security.framework */; };
 		35B3776C19CE5E1100255543 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3776319CE5E1100255543 /* SystemConfiguration.framework */; };
 		35B3776F19CE95B500255543 /* PinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3776E19CE95B500255543 /* PinView.m */; };
+		35E9105619CF36D2004D6078 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9105519CF36D2004D6078 /* SplashScreenViewController.m */; };
+		35E9105819CF383C004D6078 /* everycopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E9105719CF383C004D6078 /* everycopLogo.png */; };
 		5C14EE3719CE1405001295D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3619CE1405001295D0 /* Foundation.framework */; };
 		5C14EE3919CE1405001295D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3819CE1405001295D0 /* CoreGraphics.framework */; };
 		5C14EE3B19CE1405001295D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3A19CE1405001295D0 /* UIKit.framework */; };
@@ -48,6 +50,9 @@
 		35B3776319CE5E1100255543 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		35B3776D19CE95B500255543 /* PinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinView.h; sourceTree = "<group>"; };
 		35B3776E19CE95B500255543 /* PinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinView.m; sourceTree = "<group>"; };
+		35E9105419CF36D1004D6078 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		35E9105519CF36D2004D6078 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
+		35E9105719CF383C004D6078 /* everycopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = everycopLogo.png; sourceTree = "<group>"; };
 		5C14EE3319CE1405001295D0 /* EveryCop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryCop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C14EE3619CE1405001295D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C14EE3819CE1405001295D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +146,7 @@
 		5C14EE3C19CE1405001295D0 /* EveryCop */ = {
 			isa = PBXGroup;
 			children = (
+				35E9105719CF383C004D6078 /* everycopLogo.png */,
 				5C14EE4519CE1405001295D0 /* AppDelegate.h */,
 				5C14EE4619CE1405001295D0 /* AppDelegate.m */,
 				5C14EE4819CE1405001295D0 /* Main.storyboard */,
@@ -160,6 +166,8 @@
 				5C34D56119CE971800D0D0BB /* IncidentViewController.m */,
 				5C34D56319CEA5EB00D0D0BB /* CopViewController.h */,
 				5C34D56419CEA5EB00D0D0BB /* CopViewController.m */,
+				35E9105419CF36D1004D6078 /* SplashScreenViewController.h */,
+				35E9105519CF36D2004D6078 /* SplashScreenViewController.m */,
 			);
 			path = EveryCop;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C14EE4F19CE1405001295D0 /* Images.xcassets in Resources */,
+				35E9105819CF383C004D6078 /* everycopLogo.png in Resources */,
 				5C14EE4119CE1405001295D0 /* InfoPlist.strings in Resources */,
 				5C14EE4A19CE1405001295D0 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +266,7 @@
 				5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */,
 				5C14EE4719CE1405001295D0 /* AppDelegate.m in Sources */,
 				35B3776F19CE95B500255543 /* PinView.m in Sources */,
+				35E9105619CF36D2004D6078 /* SplashScreenViewController.m in Sources */,
 				5C14EE4319CE1405001295D0 /* main.m in Sources */,
 				5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */,
 			);

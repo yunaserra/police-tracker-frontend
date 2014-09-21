@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CopViewController : UIViewController
+@interface CopViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UILabel *nameLabel;
     IBOutlet UILabel *badgeLabel;
+    
+    IBOutlet UITableView *interactionTable;
 }
 
 @end
