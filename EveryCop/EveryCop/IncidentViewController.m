@@ -19,23 +19,24 @@
 {
     [super viewDidLoad];
     
-    descriptionView.layer.borderWidth = 1.0f;
-    descriptionView.layer.borderColor = officerButton.backgroundColor.CGColor;
-    
     officerButton.layer.cornerRadius = 10;
     officerButton.layer.borderWidth = 1;
+    officerButton.layer.borderColor = officerButton.backgroundColor.CGColor;
     
     addCommentBtn.layer.cornerRadius = 10;
     addCommentBtn.layer.borderWidth = 1;
+    addCommentBtn.layer.borderColor = officerButton.backgroundColor.CGColor;
     
     reportBtn.layer.cornerRadius = 10;
     reportBtn.layer.borderWidth = 1;
+    reportBtn.layer.borderColor = officerButton.backgroundColor.CGColor;
     
-    UIImage *img = [UIImage imageNamed:@"fbLogo.png"];
-    fbButton.imageView.image = img;
+    /*UIImage *img = [UIImage imageNamed:@"fbLogo.png"];
+    [fbButton setImage:img forState:UIControlStateNormal];
     
     img = [UIImage imageNamed:@"Twitter_logo_blue.png"];
-    twitterBtn.imageView.image = img;
+    [twitterBtn setImage:img forState:UIControlStateNormal];*/
+    
     descriptionView.text = [incidentReport objectForKey:@"Description"];
     
     excellence.text = [NSString stringWithFormat:@"%i/10",
@@ -59,9 +60,6 @@
     professional.text = [NSString stringWithFormat:@"%i/10",
                        (int)([[incidentReport objectForKey:@"Professional"] floatValue] * 10)];
     
-    officerButton.enabled = false;
-    officerButton.userInteractionEnabled = false;
-    officerButton.titleLabel.text = @"Loading Cop...";
     
     PFQuery* query = [PFQuery queryWithClassName:@"Cop"];
     PFObject *object =[incidentReport objectForKey:@"Cop"];
@@ -70,10 +68,6 @@
         if (error == nil && [objects count] > 0)
         {
             cop = [objects firstObject];
-            officerButton.enabled = true;
-            officerButton.userInteractionEnabled = true;
-            NSString * str = [NSString stringWithFormat:@"Show More of Officer %@", [cop objectForKey:@"Name"]];
-            [officerButton setTitle:str forState:UIControlStateNormal];
         }
     }];
 }

@@ -136,15 +136,45 @@
     
     attachPhotoBtn.layer.cornerRadius = 10;
     attachPhotoBtn.layer.borderWidth = 1;
+    attachButton.layer.borderColor = attachButton.backgroundColor.CGColor;
     
     submitBtn.layer.cornerRadius = 10;
     submitBtn.layer.borderWidth = 1;
+    submitBtn.layer.borderColor = attachButton.backgroundColor.CGColor;
     
     description.delegate = self;
     description.layer.borderWidth = 1.0f;
     description.layer.borderColor = attachPhotoBtn.backgroundColor.CGColor;
     
-    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 550);
+    copName.delegate = self;
+    copBadgeNumber.delegate = self;
+    
+    slider.tintColor = submitBtn.backgroundColor;
+    [slider setOnTintColor:submitBtn.backgroundColor];
+    
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 600);
+}
+
+- (void) textFieldDidBeginEditing:(UITextField *)textField
+{
+    ptToScroll = scrollView.contentOffset;
+    
+    CGPoint pt;
+    CGRect rect = [textField bounds];
+    rect = [textField convertRect:rect toView:scrollView];
+    
+    pt = rect.origin;
+    pt.x = 0;
+    pt.y -= 60;
+    
+    [scrollView setContentOffset:pt animated:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [scrollView setContentOffset:ptToScroll animated:YES];
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)submitReport:(id)sender

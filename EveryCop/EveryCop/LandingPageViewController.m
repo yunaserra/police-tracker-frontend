@@ -61,7 +61,7 @@
     [locationMgr startUpdatingLocation];
     mapView.userLocation.coordinate = locationMgr.location.coordinate;
 		
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 8, 8);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 2000, 2000);
     [mapView setRegion:region animated:YES];
     
     array = [[NSMutableArray alloc] init];
@@ -69,6 +69,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [locationMgr startUpdatingLocation];
+    mapView.userLocation.coordinate = locationMgr.location.coordinate;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 2000, 2000);
+    [mapView setRegion:region animated:YES];
+    
+    
     PFQuery* query = [PFQuery queryWithClassName:@"IncidentReport"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error == nil)
@@ -228,6 +235,7 @@
 {
     UIButton *button = (UIButton*)sender;
     incidentObject = [array objectAtIndex:button.tag];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self performSegueWithIdentifier:@"incident" sender:sender];
 }
 

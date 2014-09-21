@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface CopProfileViewController : UIViewController<UITextViewDelegate, CLLocationManagerDelegate>
+@interface CopProfileViewController : UIViewController<UITextViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate>
 {
     IBOutlet UITextField* copName;
     IBOutlet UITextField* copBadgeNumber;
@@ -38,10 +38,14 @@
     IBOutlet UIButton* attachPhotoBtn;
     IBOutlet UIButton* attachVideoBtn;
     
+    IBOutlet UISwitch* slider;
+    
     
     PFObject *toSave;
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentLocation;
+    
+    CGPoint ptToScroll;
 }
 
 - (IBAction)valueChanged:(id)sender;

@@ -37,6 +37,8 @@
 		5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* CopProfileViewController.m */; };
 		5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56119CE971800D0D0BB /* IncidentViewController.m */; };
 		5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopViewController.m */; };
+		5C39804619CF6A6200CA3CB8 /* coptest.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804519CF6A6200CA3CB8 /* coptest.PNG */; };
+		5C39804A19CF714200CA3CB8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804919CF714200CA3CB8 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		5C34D56119CE971800D0D0BB /* IncidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentViewController.m; sourceTree = "<group>"; };
 		5C34D56319CEA5EB00D0D0BB /* CopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopViewController.h; sourceTree = "<group>"; };
 		5C34D56419CEA5EB00D0D0BB /* CopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopViewController.m; sourceTree = "<group>"; };
+		5C39804519CF6A6200CA3CB8 /* coptest.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coptest.PNG; sourceTree = "<group>"; };
+		5C39804919CF714200CA3CB8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		5C14EE3C19CE1405001295D0 /* EveryCop */ = {
 			isa = PBXGroup;
 			children = (
+				5C39804519CF6A6200CA3CB8 /* coptest.PNG */,
 				35E9105D19CF520F004D6078 /* Seattle-police-shield.png */,
 				35E9105919CF4D25004D6078 /* fbLogo.png */,
 				35E9105A19CF4D26004D6078 /* Twitter_logo_blue.png */,
@@ -159,6 +164,7 @@
 				5C14EE4B19CE1405001295D0 /* LandingPageViewController.h */,
 				5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */,
 				5C14EE4E19CE1405001295D0 /* Images.xcassets */,
+				5C39804919CF714200CA3CB8 /* icon.png */,
 				5C14EE3D19CE1405001295D0 /* Supporting Files */,
 				5C14EE7319CE31BB001295D0 /* CustomIncidentListCellTableViewCell.h */,
 				5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */,
@@ -249,10 +255,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C39804619CF6A6200CA3CB8 /* coptest.PNG in Resources */,
 				5C14EE4F19CE1405001295D0 /* Images.xcassets in Resources */,
 				35E9105B19CF4D26004D6078 /* fbLogo.png in Resources */,
 				35E9105C19CF4D26004D6078 /* Twitter_logo_blue.png in Resources */,
 				35E9105819CF383C004D6078 /* everycopLogo.png in Resources */,
+				5C39804A19CF714200CA3CB8 /* icon.png in Resources */,
 				5C14EE4119CE1405001295D0 /* InfoPlist.strings in Resources */,
 				35E9105E19CF520F004D6078 /* Seattle-police-shield.png in Resources */,
 				5C14EE4A19CE1405001295D0 /* Main.storyboard in Resources */,

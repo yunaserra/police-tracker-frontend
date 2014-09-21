@@ -27,6 +27,30 @@
     
     nameLabel.text = [cop objectForKey:@"Name"];
     badgeLabel.text = [cop objectForKey:@"Badge"];
+    
+    if ([badgeLabel.text isEqualToString:@"7522"])
+    {
+        img = [UIImage imageNamed:@"coptest.PNG"];
+        copPhoto.image = img;
+    }
+    
+    int rate = arc4random() % 10;
+    label1.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    
+    rate = arc4random() % 10;
+    label2.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    
+    rate = arc4random() % 10;
+    label3.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    
+    rate = arc4random() % 10;
+    label4.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    
+    rate = arc4random() % 10;
+    label5.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    
+    rate = arc4random() % 10;
+    label6.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
