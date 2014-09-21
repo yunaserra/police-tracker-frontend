@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4B48DAD3-C117-4918-AAEF-B15D2FA1260A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EveryCop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4A8A57A9-E465-4D96-A166-A21E246F408A</key>
+		<string>https://github.com/yunaserra/police-tracker-frontend.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EveryCop/EveryCop.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4A8A57A9-E465-4D96-A166-A21E246F408A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yunaserra/police-tracker-frontend.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4A8A57A9-E465-4D96-A166-A21E246F408A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4A8A57A9-E465-4D96-A166-A21E246F408A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StartupWeekend</string>
+		</dict>
+	</array>
+</dict>
+</plist>
