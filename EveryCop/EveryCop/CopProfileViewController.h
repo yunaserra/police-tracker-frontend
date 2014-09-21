@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface CopProfileViewController : UIViewController<UITextViewDelegate>
+@interface CopProfileViewController : UIViewController<UITextViewDelegate, CLLocationManagerDelegate>
 {
     IBOutlet UITextField* copName;
     IBOutlet UITextField* copBadgeNumber;
@@ -40,6 +40,8 @@
     
     
     PFObject *toSave;
+    CLLocationManager *locationManager;
+    CLLocationCoordinate2D currentLocation;
 }
 
 - (IBAction)valueChanged:(id)sender;

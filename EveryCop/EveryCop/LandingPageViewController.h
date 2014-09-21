@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 @interface LandingPageViewController : UIViewController<MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 {
@@ -17,15 +18,15 @@
     IBOutlet UITableView *listView;
     IBOutlet UIButton *reportButton;
     IBOutlet UISegmentedControl *mapOrListButton;
+    NSMutableArray * array;
     
     CLLocationManager *locationMgr;
+    PFObject *incidentObject;
     
 }
 
 - (IBAction) viewTypeChanged : (id) sender;
 - (IBAction) buttonClicked : (id) sender;
-- (void)registerPinView:(NSString *)name AndSubtext:(NSString *)subtext WithLocation:(CLLocationCoordinate2D)coord;
 - (IBAction) pinSelected: (id) sender;
-- (void)registerPinView:(NSString *)name WithLocation:(CLLocationCoordinate2D)coord;
 
 @end

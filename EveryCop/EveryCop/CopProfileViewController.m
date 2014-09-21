@@ -15,14 +15,26 @@
 
 @implementation CopProfileViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)viewDidAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [locationManager stopUpdatingLocation];
+    locationManager = nil;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations
+{
+    CLLocation* location = [locations objectAtIndex:0];
+    currentLocation = [location coordinate];
 }
 
 - (IBAction)valueChanged:(id)sender
@@ -137,19 +149,23 @@
 
 - (IBAction)submitReport:(id)sender
 {
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:currentLocation.latitude
+                                                  longitude:currentLocation.longitude];
+    
     PFObject *incidentData = [PFObject objectWithClassName:@"IncidentReport"];
-    incidentData[@"Description"] = description.text;
-    //excelence, harm reduction, service humilty justie resepect professional
-    incidentData[@"Excellence"] = [NSNumber numberWithFloat:firstSlider.value];
-    incidentData[@"HarmReduction"] = [NSNumber numberWithFloat:secondSlider.value];
-    incidentData[@"Service"] = [NSNumber numberWithFloat:thirdSlider.value];
-    incidentData[@"Humility"] = [NSNumber numberWithFloat:fourthSlider.value];
-    incidentData[@"Justice"] = [NSNumber numberWithFloat:fifthSlider.value];
-    incidentData[@"Respect"] = [NSNumber numberWithFloat:sixthSlider.value];
-    incidentData[@"Professional"] = [NSNumber numberWithFloat:seventhSlider.value];
-    
-    incidentData[@"Cop"] = toSave;
-    
+    {
+        incidentData[@"Description"] = description.text;
+        incidentData[@"Time"] = [NSDate date];
+        incidentData[@"Location"] = geoPoint;
+        incidentData[@"Excellence"] = [NSNumber numberWithFloat:firstSlider.value];
+        incidentData[@"HarmReduction"] = [NSNumber numberWithFloat:secondSlider.value];
+        incidentData[@"Service"] = [NSNumber numberWithFloat:thirdSlider.value];
+        incidentData[@"Humility"] = [NSNumber numberWithFloat:fourthSlider.value];
+        incidentData[@"Justice"] = [NSNumber numberWithFloat:fifthSlider.value];
+        incidentData[@"Respect"] = [NSNumber numberWithFloat:sixthSlider.value];
+        incidentData[@"Professional"] = [NSNumber numberWithFloat:seventhSlider.value];
+        incidentData[@"Cop"] = toSave;
+    }
     [incidentData saveInBackground];
     
     //Move back to map screen
@@ -166,22 +182,5 @@
     }
     return TRUE;
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

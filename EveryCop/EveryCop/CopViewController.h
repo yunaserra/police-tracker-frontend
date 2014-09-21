@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface CopViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
@@ -16,6 +17,10 @@
     IBOutlet UITableView *interactionTable;
     
     IBOutlet UIImageView *copPhoto;
+    
+    PFObject *cop;
 }
+
+- (void)setCopObject:(PFObject*)copObj;
 
 @end

@@ -15,35 +15,19 @@
 
 @implementation CopViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     [interactionTable setDataSource:self];
     [interactionTable setDelegate:self];
     
     UIImage *img = [UIImage imageNamed:@"Seattle-police-shield.png"];
     copPhoto.image = img;
+    
+    nameLabel.text = [cop objectForKey:@"Name"];
+    badgeLabel.text = [cop objectForKey:@"Badge"];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-    Table stuffs
- */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -55,7 +39,18 @@
         cell = [[CustomIncidentListCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:incidentTableIdentifier];
     }
     
-    cell.textLabel.text = @"Test";
+    int posNeg = arc4random() % 2;
+    NSString *name = @"Positive";
+    if (posNeg == 0)
+    {
+        name = @"Negative";
+    }
+    
+    int month = arc4random() % 12 + 1;
+    int day = arc4random() % 28 + 1;
+    int year = arc4random() % 4 + 2010;
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %02i/%02i/%i", name, month, day, year];
     
     return cell;
 }
@@ -65,15 +60,9 @@
     return 5;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)setCopObject:(PFObject *)copObj
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self->cop = copObj;
 }
-*/
 
 @end

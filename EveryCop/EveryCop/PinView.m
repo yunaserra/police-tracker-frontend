@@ -25,13 +25,13 @@
     return _currentCoordinate;
 }
 
-- (id)initWithName:(NSString *)name AndSubtext:(NSString *)subtext AndObject:(PFObject *)object AndCoordinate:(CLLocationCoordinate2D)coordinate
+- (id)initWithName:(NSString *)name AndSubtext:(NSString *)subtext AndIndex:(int)index AndCoordinate:(CLLocationCoordinate2D)coordinate
 {
     if (self = [super init])
     {
         self.name = name;
         self.subtext = subtext;
-        self.object = object;
+        self.index = index;
         self.currentCoordinate = coordinate;
     }
     

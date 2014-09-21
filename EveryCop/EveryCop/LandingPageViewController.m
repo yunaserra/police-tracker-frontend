@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PinView.h"
 #import <Parse/Parse.h>
+#import "IncidentViewController.h"
 
 @interface LandingPageViewController ()
 
@@ -63,25 +64,67 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 8, 8);
     [mapView setRegion:region animated:YES];
     
+    array = [[NSMutableArray alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     PFQuery* query = [PFQuery queryWithClassName:@"IncidentReport"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error == nil)
         {
+            int index = 0;
             for (PFObject* object in objects)
             {
-                PFObject *cop = [object objectForKey:@"Cop"];
-                cop = [cop fetchIfNeeded];
+                NSString *name = @"Positive";
+                
+                NSDate *date = [object objectForKey:@"Time"];
+                NSCalendar *cal = [NSCalendar currentCalendar];
+                NSDateComponents *components = [cal components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
+                int year = [components year];
+                int month = [components month];
+                int day = [components day];
+                NSNumber * values = [object objectForKey:@"Excellence"];
+                float average = [values floatValue] * 10;
+                values = [object objectForKey:@"HarmReduction"];
+                average += [values floatValue] * 10;
+                values = [object objectForKey:@"Humility"];
+                average += [values floatValue] * 10;
+                values = [object objectForKey:@"Justice"];
+                average += [values floatValue] * 10;
+                values = [object objectForKey:@"Professional"];
+                average += [values floatValue] * 10;
+                values = [object objectForKey:@"Respect"];
+                average += [values floatValue] * 10;
+                values = [object objectForKey:@"Service"];
+                average += [values floatValue] * 10;
+                
+                average /= 7;
+                
+                if (average < 5)
+                {
+                    name = @"Negative";
+                }
+                
+                NSString *pinname = [NSString stringWithFormat:@"%@ : %02i/%02i/%i", name, month, day, year];
+                
                 PFGeoPoint *geo = [object objectForKey:@"Location"];
-                NSString *copBadge = @"Dummy";
                 NSString *description = [object objectForKey:@"Description"];
-                PinView * pinView = [[PinView alloc] initWithName:copBadge
+                PinView * pinView = [[PinView alloc] initWithName:pinname
                                                        AndSubtext:description
-                                                        AndObject:object
+                                                         AndIndex:index++
                                                     AndCoordinate:CLLocationCoordinate2DMake(geo.latitude, geo.longitude)];
                 [mapView addAnnotation:pinView];
+                [array addObject:object];
             }
         }
     }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [mapView removeAnnotations:mapView.annotations];
+    [array removeAllObjects];
 }
 
 /**********
@@ -126,13 +169,6 @@
     [self performSegueWithIdentifier:identifier sender:sender];
 }
 
-- (IBAction) pinSelected: (id) sender
-{
-    NSString *identifier = @"incident";
-    [self performSegueWithIdentifier:identifier sender:sender];
-}
-
-
 /*************************
  
  TABLE STUFFS
@@ -159,17 +195,6 @@
     return 5;
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)registerPinView:(NSString *)name AndSubtext:(NSString *)subtext WithLocation:(CLLocationCoordinate2D)coord
-{
-}
-
 - (MKAnnotationView *)mapView:(MKMapView *)locMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     static NSString *identifier = @"PinView";
@@ -178,7 +203,7 @@
         MKAnnotationView *annotationView = (MKAnnotationView *) [locMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil)
         {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
             annotationView.centerOffset = CGPointMake(0, -annotationView.image.size.height/2);
@@ -188,10 +213,35 @@
             annotationView.annotation = annotation;
         }
         
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        button.tag = ((PinView *)annotation).index;
+        [button addTarget:self action:@selector(gotoIncident:) forControlEvents:UIControlEventTouchUpInside];
+        annotationView.rightCalloutAccessoryView = button;
+        
         return annotationView;
     }
     
     return nil;
+}
+
+- (void)gotoIncident:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    incidentObject = [array objectAtIndex:button.tag];
+    [self performSegueWithIdentifier:@"incident" sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"incident"])
+    {
+        // Get reference to the destination view controller
+        IncidentViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        [vc setIncidentReportObject:incidentObject];
+    }
 }
 
 @end

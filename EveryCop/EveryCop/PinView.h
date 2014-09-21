@@ -14,9 +14,9 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *subtext;
-@property (nonatomic, assign) PFObject *object;
+@property (nonatomic, assign) int index;
 @property (nonatomic, assign) CLLocationCoordinate2D currentCoordinate;
 
-- (id)initWithName:(NSString *)name AndSubtext:(NSString *)subtext AndObject:(PFObject*)object AndCoordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithName:(NSString *)name AndSubtext:(NSString *)subtext AndIndex:(int)index AndCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end

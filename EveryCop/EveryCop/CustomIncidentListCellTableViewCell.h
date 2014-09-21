@@ -10,6 +10,6 @@
 
 @interface CustomIncidentListCellTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel* textLabel;
+@property (nonatomic, readonly, weak) IBOutlet UILabel* textLabel;
 
 @end
