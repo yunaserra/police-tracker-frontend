@@ -3,7 +3,7 @@
 //  EveryCop
 //
 //  Created by GabrielYuna Serra on 9/20/14.
-//  Copyright (c) 2014 PoliceTracker. All rights reserved.
+//  Copyright (c) 2014 EveryCop. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -27,6 +27,5 @@
 
 - (IBAction) viewTypeChanged : (id) sender;
 - (IBAction) buttonClicked : (id) sender;
-- (IBAction) pinSelected: (id) sender;
 
 @end

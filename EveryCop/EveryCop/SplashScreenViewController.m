@@ -2,8 +2,8 @@
 //  SplashScreenViewController.m
 //  EveryCop
 //
-//  Created by Gabriel Serra on 9/21/14.
-//  Copyright (c) 2014 PoliceTracker. All rights reserved.
+//  Created by GabrielYuna Serra on 9/21/14.
+//  Copyright (c) 2014 EveryCop. All rights reserved.
 //
 
 #import "SplashScreenViewController.h"
@@ -23,10 +23,10 @@
     logo.image = img;
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                      target:self
-                                                    selector:@selector(timeHasElapsed)
-                                                    userInfo:nil
-                                                     repeats:YES];
+                                             target:self
+                                           selector:@selector(timeHasElapsed)
+                                           userInfo:nil
+                                            repeats:YES];
 }
 
 - (void) timeHasElapsed

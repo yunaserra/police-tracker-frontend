@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="c0x-ut-ZOf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="c0x-ut-ZOf">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -104,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="-318" y="772"/>
         </scene>
-        <!--Cop Profile View Controller-->
+        <!--Incident Submission View Controller-->
         <scene sceneID="Gix-Xa-yUO">
             <objects>
-                <viewController id="EtI-aV-pLa" customClass="CopProfileViewController" sceneMemberID="viewController">
+                <viewController id="EtI-aV-pLa" customClass="IncidentSubmissionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ozW-Wl-Ra4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -375,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="533" y="-111"/>
         </scene>
-        <!--Incident View Controller-->
+        <!--Incident Report View Controller-->
         <scene sceneID="gvl-IY-8zo">
             <objects>
-                <viewController id="qbQ-RA-qnF" customClass="IncidentViewController" sceneMemberID="viewController">
+                <viewController id="qbQ-RA-qnF" customClass="IncidentReportViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXk-0J-DR6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -488,6 +487,9 @@
                                 <state key="normal" backgroundImage="fbLogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookEnable:" destination="qbQ-RA-qnF" eventType="touchDown" id="grZ-3q-Vwl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OSt-60-Uzq">
                                 <rect key="frame" x="216" y="410" width="30" height="30"/>
@@ -495,6 +497,9 @@
                                 <state key="normal" backgroundImage="Twitter_logo_blue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="twitterEnable:" destination="qbQ-RA-qnF" eventType="touchDown" id="1gd-9h-Mto"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="boX-ex-hW0">
                                 <rect key="frame" x="78" y="366" width="165" height="29"/>
@@ -559,10 +564,10 @@
             </objects>
             <point key="canvasLocation" x="571" y="493"/>
         </scene>
-        <!--Cop View Controller-->
+        <!--Cop Report View Controller-->
         <scene sceneID="CE6-xr-gmf">
             <objects>
-                <viewController id="5lD-fI-w9v" customClass="CopViewController" sceneMemberID="viewController">
+                <viewController id="5lD-fI-w9v" customClass="CopReportViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jb8-Bt-iqa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

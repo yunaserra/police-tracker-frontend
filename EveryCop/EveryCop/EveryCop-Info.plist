@@ -8,8 +8,21 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>FacebookAppID</key>
+	<string>509899102487440</string>
+	<key>FacebookDisplayName</key>
+	<string>EveryCop</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.KoannyStudios.${PRODUCT_NAME:rfc1034identifier}</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb509899102487440</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

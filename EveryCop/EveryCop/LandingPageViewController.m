@@ -3,19 +3,15 @@
 //  EveryCop
 //
 //  Created by GabrielYuna Serra on 9/20/14.
-//  Copyright (c) 2014 PoliceTracker. All rights reserved.
+//  Copyright (c) 2014 EveryCop. All rights reserved.
 //
 
-#import "LandingPageViewController.h"
-#import "CustomIncidentListCellTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "PinView.h"
 #import <Parse/Parse.h>
-#import "IncidentViewController.h"
-
-@interface LandingPageViewController ()
-
-@end
+#import "LandingPageViewController.h"
+#import "LandingPageListTableViewCell.h"
+#import "LandingPageMapPinView.h"
+#import "IncidentReportViewController.h"
 
 @implementation LandingPageViewController
 
@@ -24,11 +20,10 @@
     [self.navigationController setNavigationBarHidden:NO];
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib
     
     listView.hidden = YES;
     
@@ -60,7 +55,7 @@
     locationMgr.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationMgr startUpdatingLocation];
     mapView.userLocation.coordinate = locationMgr.location.coordinate;
-		
+    
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 2000, 2000);
     [mapView setRegion:region animated:YES];
     
@@ -117,7 +112,7 @@
                 
                 PFGeoPoint *geo = [object objectForKey:@"Location"];
                 NSString *description = [object objectForKey:@"Description"];
-                PinView * pinView = [[PinView alloc] initWithName:pinname
+                LandingPageMapPinView * pinView = [[LandingPageMapPinView alloc] initWithName:pinname
                                                        AndSubtext:description
                                                          AndIndex:index++
                                                     AndCoordinate:CLLocationCoordinate2DMake(geo.latitude, geo.longitude)];
@@ -135,7 +130,7 @@
 }
 
 /**********
-    Handles switching b/ween map or list view
+ Handles switching b/ween map or list view
  ***/
 - (IBAction) viewTypeChanged : (id) sender
 {
@@ -167,7 +162,7 @@
 }
 
 /****
-    Called when button is clicked. Brings up the report submission page
+ Called when button is clicked. Brings up the report submission page
  ***/
 - (IBAction) buttonClicked : (id) sender
 {
@@ -186,10 +181,10 @@
 {
     static NSString *incidentTableIdentifier = @"IncidentCell";
     
-    CustomIncidentListCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:incidentTableIdentifier];
+    LandingPageListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:incidentTableIdentifier];
     
     if (cell == nil) {
-        cell = [[CustomIncidentListCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:incidentTableIdentifier];
+        cell = [[LandingPageListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:incidentTableIdentifier];
     }
     
     cell.textLabel.text = @"Test";
@@ -205,7 +200,7 @@
 - (MKAnnotationView *)mapView:(MKMapView *)locMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     static NSString *identifier = @"PinView";
-    if ([annotation isKindOfClass:[PinView class]])
+    if ([annotation isKindOfClass:[LandingPageMapPinView class]])
     {
         MKAnnotationView *annotationView = (MKAnnotationView *) [locMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil)
@@ -221,7 +216,7 @@
         }
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        button.tag = ((PinView *)annotation).index;
+        button.tag = ((LandingPageMapPinView *)annotation).index;
         [button addTarget:self action:@selector(gotoIncident:) forControlEvents:UIControlEventTouchUpInside];
         annotationView.rightCalloutAccessoryView = button;
         
@@ -245,7 +240,7 @@
     if ([[segue identifier] isEqualToString:@"incident"])
     {
         // Get reference to the destination view controller
-        IncidentViewController *vc = [segue destinationViewController];
+        IncidentReportViewController *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
         [vc setIncidentReportObject:incidentObject];

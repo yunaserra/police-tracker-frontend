@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352ADE6D19DA75E10010853C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352ADE6B19DA75E10010853C /* FacebookSDK.framework */; };
+		352ADE6E19DA75E10010853C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */; };
+		352ADE7619DA779E0010853C /* coptest.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7019DA779E0010853C /* coptest.PNG */; };
+		352ADE7719DA779E0010853C /* everycopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7119DA779E0010853C /* everycopLogo.png */; };
+		352ADE7819DA779E0010853C /* fbLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7219DA779E0010853C /* fbLogo.png */; };
+		352ADE7919DA779E0010853C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7319DA779E0010853C /* icon.png */; };
+		352ADE7A19DA779E0010853C /* Seattle-police-shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7419DA779E0010853C /* Seattle-police-shield.png */; };
+		352ADE7B19DA779E0010853C /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7519DA779E0010853C /* Twitter_logo_blue.png */; };
 		35B3775919CE5DA200255543 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3775719CE5DA200255543 /* Bolts.framework */; };
 		35B3775A19CE5DA200255543 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3775819CE5DA200255543 /* Parse.framework */; };
 		35B3776419CE5E1100255543 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3775B19CE5E1100255543 /* AudioToolbox.framework */; };
@@ -17,12 +25,8 @@
 		35B3776919CE5E1100255543 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3776019CE5E1100255543 /* QuartzCore.framework */; };
 		35B3776A19CE5E1100255543 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3776119CE5E1100255543 /* Security.framework */; };
 		35B3776C19CE5E1100255543 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B3776319CE5E1100255543 /* SystemConfiguration.framework */; };
-		35B3776F19CE95B500255543 /* PinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3776E19CE95B500255543 /* PinView.m */; };
+		35B3776F19CE95B500255543 /* LandingPageMapPinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3776E19CE95B500255543 /* LandingPageMapPinView.m */; };
 		35E9105619CF36D2004D6078 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9105519CF36D2004D6078 /* SplashScreenViewController.m */; };
-		35E9105819CF383C004D6078 /* everycopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E9105719CF383C004D6078 /* everycopLogo.png */; };
-		35E9105B19CF4D26004D6078 /* fbLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E9105919CF4D25004D6078 /* fbLogo.png */; };
-		35E9105C19CF4D26004D6078 /* Twitter_logo_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E9105A19CF4D26004D6078 /* Twitter_logo_blue.png */; };
-		35E9105E19CF520F004D6078 /* Seattle-police-shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E9105D19CF520F004D6078 /* Seattle-police-shield.png */; };
 		5C14EE3719CE1405001295D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3619CE1405001295D0 /* Foundation.framework */; };
 		5C14EE3919CE1405001295D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3819CE1405001295D0 /* CoreGraphics.framework */; };
 		5C14EE3B19CE1405001295D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE3A19CE1405001295D0 /* UIKit.framework */; };
@@ -33,16 +37,22 @@
 		5C14EE4D19CE1405001295D0 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */; };
 		5C14EE4F19CE1405001295D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C14EE4E19CE1405001295D0 /* Images.xcassets */; };
 		5C14EE6C19CE178F001295D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C14EE6B19CE178F001295D0 /* MapKit.framework */; };
-		5C14EE7519CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */; };
-		5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* CopProfileViewController.m */; };
-		5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56119CE971800D0D0BB /* IncidentViewController.m */; };
-		5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopViewController.m */; };
-		5C39804619CF6A6200CA3CB8 /* coptest.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804519CF6A6200CA3CB8 /* coptest.PNG */; };
-		5C39804A19CF714200CA3CB8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804919CF714200CA3CB8 /* icon.png */; };
-		5C53980719DA279C00FD195C /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 5C53980619DA279C00FD195C /* lib */; };
+		5C14EE7519CE31BB001295D0 /* LandingPageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7419CE31BB001295D0 /* LandingPageListTableViewCell.m */; };
+		5C14EE7819CE4533001295D0 /* IncidentSubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* IncidentSubmissionViewController.m */; };
+		5C34D56219CE971800D0D0BB /* IncidentReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56119CE971800D0D0BB /* IncidentReportViewController.m */; };
+		5C34D56519CEA5EB00D0D0BB /* CopReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopReportViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352ADE6819DA6C740010853C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../Downloads/parse-library-1.4.0/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		352ADE6B19DA75E10010853C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		352ADE7019DA779E0010853C /* coptest.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coptest.PNG; path = Assets/coptest.PNG; sourceTree = "<group>"; };
+		352ADE7119DA779E0010853C /* everycopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = everycopLogo.png; path = Assets/everycopLogo.png; sourceTree = "<group>"; };
+		352ADE7219DA779E0010853C /* fbLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fbLogo.png; path = Assets/fbLogo.png; sourceTree = "<group>"; };
+		352ADE7319DA779E0010853C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Assets/icon.png; sourceTree = "<group>"; };
+		352ADE7419DA779E0010853C /* Seattle-police-shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Seattle-police-shield.png"; path = "Assets/Seattle-police-shield.png"; sourceTree = "<group>"; };
+		352ADE7519DA779E0010853C /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_logo_blue.png; path = Assets/Twitter_logo_blue.png; sourceTree = "<group>"; };
 		35B3775719CE5DA200255543 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		35B3775819CE5DA200255543 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		35B3775B19CE5E1100255543 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -53,14 +63,11 @@
 		35B3776019CE5E1100255543 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		35B3776119CE5E1100255543 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		35B3776319CE5E1100255543 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		35B3776D19CE95B500255543 /* PinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinView.h; sourceTree = "<group>"; };
-		35B3776E19CE95B500255543 /* PinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinView.m; sourceTree = "<group>"; };
+		35B3776D19CE95B500255543 /* LandingPageMapPinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageMapPinView.h; sourceTree = "<group>"; };
+		35B3776E19CE95B500255543 /* LandingPageMapPinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageMapPinView.m; sourceTree = "<group>"; };
 		35E9105419CF36D1004D6078 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		35E9105519CF36D2004D6078 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
-		35E9105719CF383C004D6078 /* everycopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = everycopLogo.png; sourceTree = "<group>"; };
-		35E9105919CF4D25004D6078 /* fbLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbLogo.png; sourceTree = "<group>"; };
-		35E9105A19CF4D26004D6078 /* Twitter_logo_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue.png; sourceTree = "<group>"; };
-		35E9105D19CF520F004D6078 /* Seattle-police-shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seattle-police-shield.png"; sourceTree = "<group>"; };
+		35E9105F19D8E5DB004D6078 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		5C14EE3319CE1405001295D0 /* EveryCop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryCop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C14EE3619CE1405001295D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C14EE3819CE1405001295D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,17 +83,14 @@
 		5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
 		5C14EE4E19CE1405001295D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C14EE6B19CE178F001295D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		5C14EE7319CE31BB001295D0 /* CustomIncidentListCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIncidentListCellTableViewCell.h; sourceTree = "<group>"; };
-		5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIncidentListCellTableViewCell.m; sourceTree = "<group>"; };
-		5C14EE7619CE4533001295D0 /* CopProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopProfileViewController.h; sourceTree = "<group>"; };
-		5C14EE7719CE4533001295D0 /* CopProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopProfileViewController.m; sourceTree = "<group>"; };
-		5C34D56019CE971800D0D0BB /* IncidentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentViewController.h; sourceTree = "<group>"; };
-		5C34D56119CE971800D0D0BB /* IncidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentViewController.m; sourceTree = "<group>"; };
-		5C34D56319CEA5EB00D0D0BB /* CopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopViewController.h; sourceTree = "<group>"; };
-		5C34D56419CEA5EB00D0D0BB /* CopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopViewController.m; sourceTree = "<group>"; };
-		5C39804519CF6A6200CA3CB8 /* coptest.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coptest.PNG; sourceTree = "<group>"; };
-		5C39804919CF714200CA3CB8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		5C53980619DA279C00FD195C /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		5C14EE7319CE31BB001295D0 /* LandingPageListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageListTableViewCell.h; sourceTree = "<group>"; };
+		5C14EE7419CE31BB001295D0 /* LandingPageListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageListTableViewCell.m; sourceTree = "<group>"; };
+		5C14EE7619CE4533001295D0 /* IncidentSubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentSubmissionViewController.h; sourceTree = "<group>"; };
+		5C14EE7719CE4533001295D0 /* IncidentSubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentSubmissionViewController.m; sourceTree = "<group>"; };
+		5C34D56019CE971800D0D0BB /* IncidentReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentReportViewController.h; sourceTree = "<group>"; };
+		5C34D56119CE971800D0D0BB /* IncidentReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentReportViewController.m; sourceTree = "<group>"; };
+		5C34D56319CEA5EB00D0D0BB /* CopReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopReportViewController.h; sourceTree = "<group>"; };
+		5C34D56419CEA5EB00D0D0BB /* CopReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopReportViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352ADE6D19DA75E10010853C /* FacebookSDK.framework in Frameworks */,
+				352ADE6E19DA75E10010853C /* ParseFacebookUtils.framework in Frameworks */,
 				35B3776819CE5E1100255543 /* MobileCoreServices.framework in Frameworks */,
 				35B3776419CE5E1100255543 /* AudioToolbox.framework in Frameworks */,
 				35B3776519CE5E1100255543 /* CFNetwork.framework in Frameworks */,
@@ -114,10 +120,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352ADE6F19DA778E0010853C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				352ADE7019DA779E0010853C /* coptest.PNG */,
+				352ADE7119DA779E0010853C /* everycopLogo.png */,
+				352ADE7219DA779E0010853C /* fbLogo.png */,
+				352ADE7319DA779E0010853C /* icon.png */,
+				352ADE7419DA779E0010853C /* Seattle-police-shield.png */,
+				352ADE7519DA779E0010853C /* Twitter_logo_blue.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		5C14EE2A19CE1405001295D0 = {
 			isa = PBXGroup;
 			children = (
-				5C53980619DA279C00FD195C /* lib */,
+				352ADE6F19DA778E0010853C /* Assets */,
 				5C14EE3C19CE1405001295D0 /* EveryCop */,
 				5C14EE3519CE1405001295D0 /* Frameworks */,
 				5C14EE3419CE1405001295D0 /* Products */,
@@ -135,11 +154,15 @@
 		5C14EE3519CE1405001295D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				352ADE6B19DA75E10010853C /* FacebookSDK.framework */,
+				352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */,
+				352ADE6819DA6C740010853C /* ParseFacebookUtils.framework */,
 				35B3775B19CE5E1100255543 /* AudioToolbox.framework */,
 				35B3775719CE5DA200255543 /* Bolts.framework */,
 				35B3775C19CE5E1100255543 /* CFNetwork.framework */,
 				5C14EE3819CE1405001295D0 /* CoreGraphics.framework */,
 				35B3775D19CE5E1100255543 /* CoreLocation.framework */,
+				35E9105F19D8E5DB004D6078 /* FacebookSDK.framework */,
 				5C14EE3619CE1405001295D0 /* Foundation.framework */,
 				35B3775E19CE5E1100255543 /* libz.dylib */,
 				5C14EE6B19CE178F001295D0 /* MapKit.framework */,
@@ -156,31 +179,23 @@
 		5C14EE3C19CE1405001295D0 /* EveryCop */ = {
 			isa = PBXGroup;
 			children = (
-				5C39804519CF6A6200CA3CB8 /* coptest.PNG */,
-				35E9105D19CF520F004D6078 /* Seattle-police-shield.png */,
-				35E9105919CF4D25004D6078 /* fbLogo.png */,
-				35E9105A19CF4D26004D6078 /* Twitter_logo_blue.png */,
-				35E9105719CF383C004D6078 /* everycopLogo.png */,
 				5C14EE4519CE1405001295D0 /* AppDelegate.h */,
 				5C14EE4619CE1405001295D0 /* AppDelegate.m */,
-				5C14EE4819CE1405001295D0 /* Main.storyboard */,
+				5C34D56319CEA5EB00D0D0BB /* CopReportViewController.h */,
+				5C34D56419CEA5EB00D0D0BB /* CopReportViewController.m */,
+				5C34D56019CE971800D0D0BB /* IncidentReportViewController.h */,
+				5C34D56119CE971800D0D0BB /* IncidentReportViewController.m */,
+				5C14EE7619CE4533001295D0 /* IncidentSubmissionViewController.h */,
+				5C14EE7719CE4533001295D0 /* IncidentSubmissionViewController.m */,
+				5C14EE7319CE31BB001295D0 /* LandingPageListTableViewCell.h */,
+				5C14EE7419CE31BB001295D0 /* LandingPageListTableViewCell.m */,
+				35B3776D19CE95B500255543 /* LandingPageMapPinView.h */,
+				35B3776E19CE95B500255543 /* LandingPageMapPinView.m */,
 				5C14EE4B19CE1405001295D0 /* LandingPageViewController.h */,
 				5C14EE4C19CE1405001295D0 /* LandingPageViewController.m */,
-				5C14EE4E19CE1405001295D0 /* Images.xcassets */,
-				5C39804919CF714200CA3CB8 /* icon.png */,
-				5C14EE3D19CE1405001295D0 /* Supporting Files */,
-				5C14EE7319CE31BB001295D0 /* CustomIncidentListCellTableViewCell.h */,
-				5C14EE7419CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m */,
-				5C14EE7619CE4533001295D0 /* CopProfileViewController.h */,
-				5C14EE7719CE4533001295D0 /* CopProfileViewController.m */,
-				35B3776D19CE95B500255543 /* PinView.h */,
-				35B3776E19CE95B500255543 /* PinView.m */,
-				5C34D56019CE971800D0D0BB /* IncidentViewController.h */,
-				5C34D56119CE971800D0D0BB /* IncidentViewController.m */,
-				5C34D56319CEA5EB00D0D0BB /* CopViewController.h */,
-				5C34D56419CEA5EB00D0D0BB /* CopViewController.m */,
 				35E9105419CF36D1004D6078 /* SplashScreenViewController.h */,
 				35E9105519CF36D2004D6078 /* SplashScreenViewController.m */,
+				5C14EE3D19CE1405001295D0 /* Supporting Files */,
 			);
 			path = EveryCop;
 			sourceTree = "<group>";
@@ -189,9 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				5C14EE3E19CE1405001295D0 /* EveryCop-Info.plist */,
+				5C14EE4419CE1405001295D0 /* EveryCop-Prefix.pch */,
+				5C14EE4E19CE1405001295D0 /* Images.xcassets */,
 				5C14EE3F19CE1405001295D0 /* InfoPlist.strings */,
 				5C14EE4219CE1405001295D0 /* main.m */,
-				5C14EE4419CE1405001295D0 /* EveryCop-Prefix.pch */,
+				5C14EE4819CE1405001295D0 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,16 +275,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C39804619CF6A6200CA3CB8 /* coptest.PNG in Resources */,
+				352ADE7919DA779E0010853C /* icon.png in Resources */,
 				5C14EE4F19CE1405001295D0 /* Images.xcassets in Resources */,
-				35E9105B19CF4D26004D6078 /* fbLogo.png in Resources */,
-				35E9105C19CF4D26004D6078 /* Twitter_logo_blue.png in Resources */,
-				35E9105819CF383C004D6078 /* everycopLogo.png in Resources */,
-				5C39804A19CF714200CA3CB8 /* icon.png in Resources */,
-				5C53980719DA279C00FD195C /* lib in Resources */,
+				352ADE7819DA779E0010853C /* fbLogo.png in Resources */,
+				352ADE7619DA779E0010853C /* coptest.PNG in Resources */,
+				352ADE7A19DA779E0010853C /* Seattle-police-shield.png in Resources */,
 				5C14EE4119CE1405001295D0 /* InfoPlist.strings in Resources */,
-				35E9105E19CF520F004D6078 /* Seattle-police-shield.png in Resources */,
+				352ADE7719DA779E0010853C /* everycopLogo.png in Resources */,
 				5C14EE4A19CE1405001295D0 /* Main.storyboard in Resources */,
+				352ADE7B19DA779E0010853C /* Twitter_logo_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,14 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C14EE4D19CE1405001295D0 /* LandingPageViewController.m in Sources */,
-				5C14EE7819CE4533001295D0 /* CopProfileViewController.m in Sources */,
-				5C14EE7519CE31BB001295D0 /* CustomIncidentListCellTableViewCell.m in Sources */,
-				5C34D56219CE971800D0D0BB /* IncidentViewController.m in Sources */,
+				5C14EE7819CE4533001295D0 /* IncidentSubmissionViewController.m in Sources */,
+				5C14EE7519CE31BB001295D0 /* LandingPageListTableViewCell.m in Sources */,
+				5C34D56219CE971800D0D0BB /* IncidentReportViewController.m in Sources */,
 				5C14EE4719CE1405001295D0 /* AppDelegate.m in Sources */,
-				35B3776F19CE95B500255543 /* PinView.m in Sources */,
+				35B3776F19CE95B500255543 /* LandingPageMapPinView.m in Sources */,
 				35E9105619CF36D2004D6078 /* SplashScreenViewController.m in Sources */,
 				5C14EE4319CE1405001295D0 /* main.m in Sources */,
-				5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */,
+				5C34D56519CEA5EB00D0D0BB /* CopReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +408,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/dagabe14/Documents/FacebookSDK,
+					"/Users/dagabe14/Downloads/parse-library-1.4.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EveryCop/EveryCop-Prefix.pch";
 				INFOPLIST_FILE = "EveryCop/EveryCop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -409,9 +428,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dagabe14/Documents/FacebookSDK,
+					"/Users/dagabe14/Downloads/parse-library-1.4.0",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EveryCop/EveryCop-Prefix.pch";
 				INFOPLIST_FILE = "EveryCop/EveryCop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
