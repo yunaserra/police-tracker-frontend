@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface CopProfileViewController : UIViewController<UITextViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate>
+@interface CopProfileViewController : UIViewController<UITextViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     IBOutlet UITextField* copName;
     IBOutlet UITextField* copBadgeNumber;
@@ -35,10 +35,10 @@
     
     IBOutlet UIScrollView *scrollView;
     IBOutlet UIButton* submitBtn;
-    IBOutlet UIButton* attachPhotoBtn;
-    IBOutlet UIButton* attachVideoBtn;
+    IBOutlet UIButton* attachPhotoVideoBtn;
     
     IBOutlet UISwitch* slider;
+    
     
     
     PFObject *toSave;
@@ -51,5 +51,6 @@
 - (IBAction)valueChanged:(id)sender;
 - (IBAction)finishedTyping:(id)sender;
 - (IBAction)submitReport:(id)sender;
+- (IBAction)takePhotoVideo:(id)sender;
 
 @end

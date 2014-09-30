@@ -39,6 +39,7 @@
 		5C34D56519CEA5EB00D0D0BB /* CopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopViewController.m */; };
 		5C39804619CF6A6200CA3CB8 /* coptest.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804519CF6A6200CA3CB8 /* coptest.PNG */; };
 		5C39804A19CF714200CA3CB8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C39804919CF714200CA3CB8 /* icon.png */; };
+		5C53980719DA279C00FD195C /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 5C53980619DA279C00FD195C /* lib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		5C34D56419CEA5EB00D0D0BB /* CopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopViewController.m; sourceTree = "<group>"; };
 		5C39804519CF6A6200CA3CB8 /* coptest.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coptest.PNG; sourceTree = "<group>"; };
 		5C39804919CF714200CA3CB8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		5C53980619DA279C00FD195C /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +94,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B3776819CE5E1100255543 /* MobileCoreServices.framework in Frameworks */,
 				35B3776419CE5E1100255543 /* AudioToolbox.framework in Frameworks */,
 				35B3776519CE5E1100255543 /* CFNetwork.framework in Frameworks */,
 				35B3776619CE5E1100255543 /* CoreLocation.framework in Frameworks */,
 				35B3776719CE5E1100255543 /* libz.dylib in Frameworks */,
-				35B3776819CE5E1100255543 /* MobileCoreServices.framework in Frameworks */,
 				35B3776919CE5E1100255543 /* QuartzCore.framework in Frameworks */,
 				35B3776A19CE5E1100255543 /* Security.framework in Frameworks */,
 				35B3776C19CE5E1100255543 /* SystemConfiguration.framework in Frameworks */,
@@ -115,6 +117,7 @@
 		5C14EE2A19CE1405001295D0 = {
 			isa = PBXGroup;
 			children = (
+				5C53980619DA279C00FD195C /* lib */,
 				5C14EE3C19CE1405001295D0 /* EveryCop */,
 				5C14EE3519CE1405001295D0 /* Frameworks */,
 				5C14EE3419CE1405001295D0 /* Products */,
@@ -261,6 +264,7 @@
 				35E9105C19CF4D26004D6078 /* Twitter_logo_blue.png in Resources */,
 				35E9105819CF383C004D6078 /* everycopLogo.png in Resources */,
 				5C39804A19CF714200CA3CB8 /* icon.png in Resources */,
+				5C53980719DA279C00FD195C /* lib in Resources */,
 				5C14EE4119CE1405001295D0 /* InfoPlist.strings in Resources */,
 				35E9105E19CF520F004D6078 /* Seattle-police-shield.png in Resources */,
 				5C14EE4A19CE1405001295D0 /* Main.storyboard in Resources */,

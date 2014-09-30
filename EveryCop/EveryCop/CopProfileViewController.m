@@ -7,7 +7,7 @@
 //
 
 #import "CopProfileViewController.h"
-
+#import <MobileCoreServices/UTCoreTypes.h>
 
 @interface CopProfileViewController ()
 
@@ -134,8 +134,8 @@
     sixthSlider.tag = 6;
     seventhSlider.tag = 7;
     
-    attachPhotoBtn.layer.cornerRadius = 10;
-    attachPhotoBtn.layer.borderWidth = 1;
+    attachPhotoVideoBtn.layer.cornerRadius = 10;
+    attachPhotoVideoBtn.layer.borderWidth = 1;
     attachButton.layer.borderColor = attachButton.backgroundColor.CGColor;
     
     submitBtn.layer.cornerRadius = 10;
@@ -144,7 +144,7 @@
     
     description.delegate = self;
     description.layer.borderWidth = 1.0f;
-    description.layer.borderColor = attachPhotoBtn.backgroundColor.CGColor;
+    description.layer.borderColor = attachPhotoVideoBtn.backgroundColor.CGColor;
     
     copName.delegate = self;
     copBadgeNumber.delegate = self;
@@ -211,6 +211,62 @@
         return FALSE;
     }
     return TRUE;
+}
+
+- (IBAction)takePhotoVideo:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    picker.videoQuality = UIImagePickerControllerQualityTypeLow;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //Get the type of media
+    NSString *media = info[UIImagePickerControllerMediaType];
+    
+    //media is a movie
+    if ([media isEqualToString:(NSString*)kUTTypeMovie])
+    {
+        NSData *data = [NSData dataWithContentsOfURL:info[UIImagePickerControllerMediaURL]];
+        
+    }
+    else if ([media isEqualToString:(NSString*)kUTTypeImage])
+    {
+        UIImage *img = info[UIImagePickerControllerEditedImage];
+        //resize to 1/4 of original size
+        CGSize compressedSize = CGSizeMake(img.size.width / 4, img.size.height / 4);
+        
+        UIGraphicsBeginImageContext(compressedSize);
+        [img drawInRect:CGRectMake(0, 0, compressedSize.width, compressedSize.height)];
+        UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+    }
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //self.imageView.image = chosenImage;
+    
+    //Pulls out PNG data of the chosen image
+    NSData *pngData = UIImagePNGRepresentation(chosenImage);
+    
+    //Write PNG data to a file
+    //NSString *filePath = [ViewController getFilePath:@"imageTest.png"];
+    //[pngData writeToFile:filePath atomically:YES];
+    
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
