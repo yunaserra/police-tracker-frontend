@@ -40,11 +40,14 @@
     
     IBOutlet UISwitch* slider;
     
+    
     PFObject *toSave;
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentLocation;
     
     CGPoint ptToScroll;
+    
+    PFFile *imageFile;
 }
 
 - (IBAction)valueChanged:(id)sender;

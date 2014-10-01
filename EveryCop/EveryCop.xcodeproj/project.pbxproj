@@ -41,6 +41,8 @@
 		5C14EE7819CE4533001295D0 /* IncidentSubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C14EE7719CE4533001295D0 /* IncidentSubmissionViewController.m */; };
 		5C34D56219CE971800D0D0BB /* IncidentReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56119CE971800D0D0BB /* IncidentReportViewController.m */; };
 		5C34D56519CEA5EB00D0D0BB /* CopReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C34D56419CEA5EB00D0D0BB /* CopReportViewController.m */; };
+		5C6509CC19DBD01F00DAF53F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6509CB19DBD01F00DAF53F /* Accounts.framework */; };
+		5C6509CE19DBD03200DAF53F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6509CD19DBD03200DAF53F /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		5C34D56119CE971800D0D0BB /* IncidentReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentReportViewController.m; sourceTree = "<group>"; };
 		5C34D56319CEA5EB00D0D0BB /* CopReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopReportViewController.h; sourceTree = "<group>"; };
 		5C34D56419CEA5EB00D0D0BB /* CopReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopReportViewController.m; sourceTree = "<group>"; };
+		5C6509CB19DBD01F00DAF53F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		5C6509CD19DBD03200DAF53F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6509CE19DBD03200DAF53F /* Social.framework in Frameworks */,
+				5C6509CC19DBD01F00DAF53F /* Accounts.framework in Frameworks */,
 				352ADE6D19DA75E10010853C /* FacebookSDK.framework in Frameworks */,
 				352ADE6E19DA75E10010853C /* ParseFacebookUtils.framework in Frameworks */,
 				35B3776819CE5E1100255543 /* MobileCoreServices.framework in Frameworks */,
@@ -154,6 +160,8 @@
 		5C14EE3519CE1405001295D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C6509CD19DBD03200DAF53F /* Social.framework */,
+				5C6509CB19DBD01F00DAF53F /* Accounts.framework */,
 				352ADE6B19DA75E10010853C /* FacebookSDK.framework */,
 				352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */,
 				352ADE6819DA6C740010853C /* ParseFacebookUtils.framework */,

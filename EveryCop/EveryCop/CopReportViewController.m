@@ -30,23 +30,51 @@
         copPhoto.image = img;
     }
     
+    float totalRating = 0.0f;
     int rate = arc4random() % 10;
     label1.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
     
     rate = arc4random() % 10;
     label2.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
     
     rate = arc4random() % 10;
     label3.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
     
     rate = arc4random() % 10;
     label4.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
     
     rate = arc4random() % 10;
     label5.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
     
     rate = arc4random() % 10;
     label6.text = [NSString stringWithFormat:@"%i%@", rate, @" / 10"];
+    totalRating += rate;
+    
+    //convert to %
+    totalRating = (totalRating / 60.0f) * 100.0f;
+    
+    averageRating.text = [NSString stringWithFormat:@"%.0f%%", totalRating];
+    [averageRating setFont:[UIFont boldSystemFontOfSize:18.0f]];
+    if (totalRating <= 40.0f)
+    {
+        //color it red
+        averageRating.textColor = [UIColor redColor];
+    }
+    else if (totalRating <= 80.0f)
+    {
+        averageRating.textColor = [UIColor colorWithRed:209/255.0f
+                                                  green:199.0f/255.0f
+                                                   blue:59/255.0f alpha:1.0f];
+    }
+    else
+    {
+        averageRating.textColor = [UIColor colorWithRed:0.0f green:153/255.0f blue:0.0f alpha:1.0f];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

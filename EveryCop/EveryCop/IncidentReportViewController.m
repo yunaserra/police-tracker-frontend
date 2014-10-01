@@ -60,6 +60,15 @@
             cop = [objects firstObject];
         }
     }];
+    
+    PFFile *mediaFile = incidentReport[@"MediaFile"];
+    [mediaFile getDataInBackgroundWithBlock:^(NSData *mediaData, NSError *error) {
+        if (!error)
+        {
+            UIImage *img = [UIImage imageWithData:mediaData];
+            mediaView.image = img;
+        }
+    }];
 }
 
 - (IBAction) officerButtonClicked : (id) sender

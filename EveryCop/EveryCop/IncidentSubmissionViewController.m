@@ -148,7 +148,7 @@
     slider.tintColor = submitBtn.backgroundColor;
     [slider setOnTintColor:submitBtn.backgroundColor];
     
-    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 600);
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, 1000);
 }
 
 - (void) textFieldDidBeginEditing:(UITextField *)textField
@@ -191,6 +191,7 @@
         incidentData[@"Respect"] = [NSNumber numberWithFloat:sixthSlider.value];
         incidentData[@"Professional"] = [NSNumber numberWithFloat:seventhSlider.value];
         incidentData[@"Cop"] = toSave;
+        incidentData[@"MediaFile"] = imageFile;
     }
     [incidentData saveInBackground];
     
@@ -232,6 +233,8 @@
     {
         NSData *data = [NSData dataWithContentsOfURL:info[UIImagePickerControllerMediaURL]];
         
+        imageFile = [PFFile fileWithName:@"movie.mov" data:data];
+        
     }
     else if ([media isEqualToString:(NSString*)kUTTypeImage])
     {
@@ -243,6 +246,9 @@
         [img drawInRect:CGRectMake(0, 0, compressedSize.width, compressedSize.height)];
         UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
+        NSData *data = UIImagePNGRepresentation(newImg);
+        
+        imageFile = [PFFile fileWithName:@"pict.png" data:data];
         
     }
     

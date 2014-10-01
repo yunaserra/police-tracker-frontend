@@ -21,6 +21,8 @@
     IBOutlet UILabel *label5;
     IBOutlet UILabel *label6;
     
+    IBOutlet UILabel *averageRating;
+    
     IBOutlet UITableView *interactionTable;
     
     IBOutlet UIImageView *copPhoto;

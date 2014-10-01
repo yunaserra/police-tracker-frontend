@@ -26,6 +26,8 @@
     IBOutlet UIButton *fbButton;
     IBOutlet UIButton *addCommentBtn;
     
+    IBOutlet UIImageView *mediaView;
+    
     PFObject *incidentReport;
     PFObject *cop;
 }

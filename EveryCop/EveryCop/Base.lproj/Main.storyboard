@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="c0x-ut-ZOf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="c0x-ut-ZOf">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -521,7 +522,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="wQ4-Fd-kUM">
-                                <rect key="frame" x="202" y="259" width="110" height="40"/>
+                                <rect key="frame" x="194" y="295" width="110" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55039911679999998" green="0.11774138889999999" blue="0.12265879540000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -540,6 +541,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ypj-r1-JTE">
+                                <rect key="frame" x="194" y="189" width="110" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -552,6 +557,7 @@
                         <outlet property="harmReduction" destination="yvj-IU-zEN" id="bMj-Qq-lzV"/>
                         <outlet property="humilty" destination="3tp-1P-3l2" id="zDD-lB-WOg"/>
                         <outlet property="justice" destination="Fkf-Ah-kUD" id="nyz-hW-aI9"/>
+                        <outlet property="mediaView" destination="Ypj-r1-JTE" id="kTg-dE-dDS"/>
                         <outlet property="officerButton" destination="wQ4-Fd-kUM" id="nQE-7f-94P"/>
                         <outlet property="professional" destination="RzM-5a-7qA" id="JkC-Ua-n0e"/>
                         <outlet property="respect" destination="xTu-NX-t4O" id="1Wi-WB-syk"/>
@@ -692,7 +698,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QCt-a4-83L">
-                                <rect key="frame" x="199" y="171" width="100" height="100"/>
+                                <rect key="frame" x="199" y="158" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Recent | Highest Rated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ivt-mK-Zdn">
@@ -702,11 +708,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b3e-gy-lht">
+                                <rect key="frame" x="229" y="272" width="41" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gjD-m4-JfN"/>
                     <connections>
+                        <outlet property="averageRating" destination="b3e-gy-lht" id="qhR-eK-bEy"/>
                         <outlet property="badgeLabel" destination="fWY-Q6-bSS" id="9FN-wG-7KV"/>
                         <outlet property="copPhoto" destination="QCt-a4-83L" id="sYE-OQ-u4y"/>
                         <outlet property="interactionTable" destination="uyB-Du-ros" id="CvW-RK-3PF"/>

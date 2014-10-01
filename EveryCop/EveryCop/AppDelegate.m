@@ -17,6 +17,7 @@
     [Parse setApplicationId:@"TbZAwlPNOu5zrv6BWZEpt32pPVCIn94KNof8f3Ne"
                   clientKey:@"SU4ym1OUY90Iwp1tYmzCJ0t34Ny3iP3Snaw93aqF"];
     [PFFacebookUtils initializeFacebook];
+    [PFTwitterUtils initializeWithConsumerKey:@"kK7E8QFyMjhuS5kNZRzP5m1pz" consumerSecret:@"TQHQMvnaVwyhrC2sHiW9K6Dv3diPlHrC3nJIZDcTt3DYrt3yCA"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
