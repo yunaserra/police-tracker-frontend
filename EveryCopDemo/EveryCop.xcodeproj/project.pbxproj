@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		352ADE6D19DA75E10010853C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352ADE6B19DA75E10010853C /* FacebookSDK.framework */; };
-		352ADE6E19DA75E10010853C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */; };
 		352ADE7619DA779E0010853C /* coptest.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7019DA779E0010853C /* coptest.PNG */; };
 		352ADE7719DA779E0010853C /* everycopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7119DA779E0010853C /* everycopLogo.png */; };
 		352ADE7819DA779E0010853C /* fbLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 352ADE7219DA779E0010853C /* fbLogo.png */; };
@@ -46,9 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		352ADE6819DA6C740010853C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../Downloads/parse-library-1.4.0/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
-		352ADE6B19DA75E10010853C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		352ADE7019DA779E0010853C /* coptest.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coptest.PNG; path = Assets/coptest.PNG; sourceTree = "<group>"; };
 		352ADE7119DA779E0010853C /* everycopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = everycopLogo.png; path = Assets/everycopLogo.png; sourceTree = "<group>"; };
 		352ADE7219DA779E0010853C /* fbLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fbLogo.png; path = Assets/fbLogo.png; sourceTree = "<group>"; };
@@ -69,7 +64,6 @@
 		35B3776E19CE95B500255543 /* LandingPageMapPinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageMapPinView.m; sourceTree = "<group>"; };
 		35E9105419CF36D1004D6078 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		35E9105519CF36D2004D6078 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
-		35E9105F19D8E5DB004D6078 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		5C14EE3319CE1405001295D0 /* EveryCop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryCop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C14EE3619CE1405001295D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C14EE3819CE1405001295D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,8 +98,6 @@
 			files = (
 				5C6509CE19DBD03200DAF53F /* Social.framework in Frameworks */,
 				5C6509CC19DBD01F00DAF53F /* Accounts.framework in Frameworks */,
-				352ADE6D19DA75E10010853C /* FacebookSDK.framework in Frameworks */,
-				352ADE6E19DA75E10010853C /* ParseFacebookUtils.framework in Frameworks */,
 				35B3776819CE5E1100255543 /* MobileCoreServices.framework in Frameworks */,
 				35B3776419CE5E1100255543 /* AudioToolbox.framework in Frameworks */,
 				35B3776519CE5E1100255543 /* CFNetwork.framework in Frameworks */,
@@ -160,17 +152,12 @@
 		5C14EE3519CE1405001295D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C6509CD19DBD03200DAF53F /* Social.framework */,
 				5C6509CB19DBD01F00DAF53F /* Accounts.framework */,
-				352ADE6B19DA75E10010853C /* FacebookSDK.framework */,
-				352ADE6C19DA75E10010853C /* ParseFacebookUtils.framework */,
-				352ADE6819DA6C740010853C /* ParseFacebookUtils.framework */,
 				35B3775B19CE5E1100255543 /* AudioToolbox.framework */,
 				35B3775719CE5DA200255543 /* Bolts.framework */,
 				35B3775C19CE5E1100255543 /* CFNetwork.framework */,
 				5C14EE3819CE1405001295D0 /* CoreGraphics.framework */,
 				35B3775D19CE5E1100255543 /* CoreLocation.framework */,
-				35E9105F19D8E5DB004D6078 /* FacebookSDK.framework */,
 				5C14EE3619CE1405001295D0 /* Foundation.framework */,
 				35B3775E19CE5E1100255543 /* libz.dylib */,
 				5C14EE6B19CE178F001295D0 /* MapKit.framework */,
@@ -178,6 +165,7 @@
 				35B3775819CE5DA200255543 /* Parse.framework */,
 				35B3776019CE5E1100255543 /* QuartzCore.framework */,
 				35B3776119CE5E1100255543 /* Security.framework */,
+				5C6509CD19DBD03200DAF53F /* Social.framework */,
 				35B3776319CE5E1100255543 /* SystemConfiguration.framework */,
 				5C14EE3A19CE1405001295D0 /* UIKit.framework */,
 			);
@@ -416,8 +404,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/dagabe14/Documents/FacebookSDK,
-					"/Users/dagabe14/Downloads/parse-library-1.4.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EveryCop/EveryCop-Prefix.pch";
@@ -438,8 +424,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuna Serra (7LBMG6DT25)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/dagabe14/Documents/FacebookSDK,
-					"/Users/dagabe14/Downloads/parse-library-1.4.0",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

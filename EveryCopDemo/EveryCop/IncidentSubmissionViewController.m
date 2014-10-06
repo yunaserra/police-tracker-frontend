@@ -252,11 +252,11 @@
         
     }
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     //self.imageView.image = chosenImage;
     
     //Pulls out PNG data of the chosen image
-    NSData *pngData = UIImagePNGRepresentation(chosenImage);
+    //NSData *pngData = UIImagePNGRepresentation(chosenImage);
     
     //Write PNG data to a file
     //NSString *filePath = [ViewController getFilePath:@"imageTest.png"];
